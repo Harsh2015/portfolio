@@ -1,0 +1,594 @@
+ /* Body Styling */
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+ /* Navbar Styles */
+.navbar {
+    padding: 10px 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style for the navbar icon */
+.navbar-icon {
+    width: 20px; /* Adjust the size of the icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between the icon and the text */
+    vertical-align: middle; /* Align icon vertically with the text */
+}
+
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Gold/yellow color on hover */
+    font-weight: bolder;
+}
+
+/* Underline effect with animation */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ffcc00;
+    transition: width 0.3s ease;
+}
+
+/* On hover, animate the underline */
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Navbar background color change when scrolling */
+.navbar.scrolled {
+    background-color: #333 !important; /* Darker background when scrolled */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background-color: transparent;
+    }
+
+.navbar-brand{
+
+    font-weight: bold ;
+}
+
+    .navbar-nav .nav-link {
+        padding: 5px;
+    }
+}
+
+/* Adjustments for mobile view (for even smaller screens) */
+@media (max-width: 576px) {
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Smaller font size on mobile */
+    }
+
+    .navbar-brand {
+        font-size: 1.9rem;
+        font-weight: bold;
+
+    }
+}
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    /* Gradient transitioning from teal to dark purple */
+    overflow: hidden;
+    color: white;
+    padding-top: 50px; /* Default padding for larger screens */
+}
+
+/* Light Text Styling for Contrast */
+.text-yellow {
+    color: #f1c40f; /* Bright yellow for emphasis */
+    font-weight: bold;
+}
+
+
+/* Bold and Adjusting the Text */
+h1 {
+    font-size: 3rem; /* Adjust font size for large screens */
+    margin-bottom: 10px;
+    font-weight: bold; /* Make the text bold */
+    text-align: center;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break and don't overflow */
+    overflow: visible; /* Ensure the text doesn't get cut off */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text overflows */
+}
+
+/* Hero Section Specific Text Styling */
+.hero-section h1 {
+    white-space: normal; /* Allow text to break and wrap */
+    overflow: visible; /* Ensure text isn't cut off */
+    text-overflow: ellipsis; /* Show ellipsis if text overflows */
+    font-size: 2.5rem;
+    word-wrap: break-word; /* Allow text to break into a new line if necessary */
+}
+
+/* Canvas for 3D Effect */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Hero Image */
+.hero-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Yellow Text Styling */
+.text-yellow {
+    color: yellow; /* Set the text color to yellow */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Button Styling */
+.hero-section .btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Responsive Adjustments for Different Screen Sizes */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Make text smaller on tablets */
+    }
+
+    .hero-section h1 {
+        font-size: 2rem; /* Adjust font size for hero section */
+    }
+
+    .hero-section p {
+        font-size: 1.2rem; /* Adjust font size for paragraph */
+    }
+
+    .hero-section .btn {
+        font-size: 1rem; /* Adjust button size */
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 0px !important; /* Reduce top margin for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller font for very small screens */
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem; /* Adjust hero section font size */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .hero-section .btn {
+        font-size: 0.9rem; /* Adjust button size */
+        padding: 6px 14px;
+    }
+
+    .hero-image {
+        width: 350px; /* Smaller image for small screens */
+        height: 350px;
+    }
+}
+
+
+/* Skill Section */
+.skills-section {
+    position: relative;
+}
+
+.skill-card {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #007bff;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Card Icons */
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.card-title{
+    color: #007bff;
+}
+
+/* Sub-skill Icon (optional, for further subcategories) */
+.sub-skill-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive Animation for Skill Cards */
+@media (max-width: 768px) {
+    .skill-card {
+        transform: scale(0.95);
+    }
+}
+
+/* Dropdown Icon Size (if applicable) */
+.dropdown-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* About Me Section Styling */
+#about {
+    background-color: #f8f9fa; /* Light background */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #007bff; /* Accent color for the title */
+    font-weight: bold;
+}
+
+#about .lead {
+    font-size: 1.1rem;
+    color: #333; /* Darker text for readability */
+    line-height: 1.6;
+    text-align: justify; /* Justified text for neat appearance */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem; /* Reduce font size on smaller screens */
+    }
+
+    #about .lead {
+        font-size: 1rem; /* Make text smaller for better readability */
+    }
+}
+
+
+/* Connect with Me Section */
+.connect-section {
+    background-color: #f9f9f9; /* Light background */
+    padding: 3rem 0;
+}
+
+.connect-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff; /* Blue accent title */
+}
+
+.connect-section .lead {
+    font-size: 1.2rem;
+    color: #555; /* Subtle gray for better readability */
+    margin-bottom: 20px;
+}
+
+/* Social Links Styling */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between links */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #007bff; /* Blue link color */
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    transform: rotate(360deg); /* Fun spin animation */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .social-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 19px; /* Adjust spacing for vertical layout */
+    }
+
+    .social-link {
+        font-size: 1rem; /* Slightly smaller text for smaller screens */
+        text-align: center; /* Center text */
+    }
+
+    .social-icon {
+        width: 70px; /* Larger icons for phones */
+        height: 70px;
+        margin-bottom: 5px; /* Space between icon and text */
+    }
+}
+
+/* Project Card Styling */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures image stays inside the card */
+    border: 5px black; /* Adds a light border to the card */
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    border-color: #007bff; /* Highlight border on hover */
+}
+
+/* Project Image Styling */
+.project-img {
+    border-radius: 8px; /* Rounded corners for the image */
+    border: 15px black; /* Adds a border around the image */
+    transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-card {
+        transform: none; /* Disable hover translation for smaller screens */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    }
+}
+
+@media (max-width: 576px) {
+    .project-card {
+        margin-bottom: 1rem; /* Add spacing between cards on small screens */
+    }
+
+    .project-img {
+        border-width: 2px; /* Slightly thinner borders for smaller screens */
+    }
+}
+
+/* Education Section Styling */
+#education {
+    background: linear-gradient(to right, #f7faff, #e3f2fd);
+    color: #333;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff; /* Accent color */
+}
+
+.education-wrapper {
+    background: #ffffff; /* Card background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Card shadow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.education-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd; /* Separator line */
+}
+
+.education-item:last-child {
+    border-bottom: none; /* Remove line for the last item */
+}
+
+.degree-title {
+    font-size: 1.8rem;
+    color: #007bff;
+}
+
+.institution {
+    font-size: 1rem;
+    color: #555;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .degree-title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .degree-title {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* Gradient background */
+    color: white;
+    padding: 30px 0; /* Reduced padding for responsiveness */
+}
+
+#contact .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff; /* Accent color */
+}
+
+#contact .lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #f1f1f1; /* Lightened the color for better visibility */
+}
+
+#contact p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #f1f1f1; /* Lightened the color for better visibility */
+}
+
+.contact-btn {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    background-color:#007bff ; /* Bright yellow */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #e1a700; /* Darken yellow on hover */
+    color: white;
+}
+
+.text-muted {
+    font-size: 0.9rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Grey background */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Contact Button Styling for Button Class */
+.btn-contact {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    background-color: #555; /* Dark grey */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #444; /* Darker grey on hover */
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact .section-title {
+        font-size: 1.5rem;
+    }
+
+    #contact .lead {
+        font-size: 1rem;
+    }
+
+    .contact-btn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    .text-muted {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure this CSS rule is present to apply the correct color */
+.dark {
+    color: black !important; /* Make sure it overrides other conflicting styles */
+}
+
