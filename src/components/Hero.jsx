@@ -26,7 +26,7 @@ className="relative overflow-hidden pt-6 sm:pt-4 md:pt-6"
 
 {/* Profile Image */}
 <img
-  src="/me.jpg"
+  src="/profile.png"
   alt="Harsh Katariya"
   className="
     w-40 h-40
